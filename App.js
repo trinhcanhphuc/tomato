@@ -32,7 +32,8 @@ const App: () => React$Node = () => {
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
-          <Header />
+          {/*<Header />*/}
+          <Text style={styles.header}>This is a tomato app</Text>
           {global.HermesInternal == null ? null : (
             <View style={styles.engine}>
               <Text style={styles.footer}>Engine: Hermes</Text>
@@ -79,6 +80,13 @@ const styles = StyleSheet.create({
   engine: {
     position: 'absolute',
     right: 0,
+  },
+  header: {
+    fontSize: 30,
+    fontWeight: 'bold',
+    color: Colors.dark,
+    textAlign: 'center',
+    margin: 30
   },
   body: {
     backgroundColor: Colors.white,
